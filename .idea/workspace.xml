@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cd11af6-a4a5-42a1-8acb-e8535fa9f5b7" name="Changes" comment="First files">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/course1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/course2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/course3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/course4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/course5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icon1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icon2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/icon3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/lens.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/img/logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/stars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="2cd11af6-a4a5-42a1-8acb-e8535fa9f5b7" name="Changes" comment="Agregando articulos al carro de compras">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +68,7 @@
       <workItem from="1662294348132" duration="582000" />
       <workItem from="1662294945320" duration="5819000" />
       <workItem from="1662302842141" duration="2456000" />
-      <workItem from="1662305326016" duration="2946000" />
+      <workItem from="1662305326016" duration="6558000" />
     </task>
     <task id="LOCAL-00001" summary="First files">
       <created>1662299804867</created>
@@ -88,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662299804867</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Agregando articulos al carro de compras">
+      <created>1662308381482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662308381482</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +103,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First files" />
-    <option name="LAST_COMMIT_MESSAGE" value="First files" />
+    <MESSAGE value="Agregando articulos al carro de compras" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregando articulos al carro de compras" />
   </component>
 </project>

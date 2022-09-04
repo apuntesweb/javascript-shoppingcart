@@ -7,7 +7,17 @@ let articulosCarrito = [];
 
 cargarEventListeners();
 function cargarEventListeners() {
+    // Agregar cursos
     listaCursos.addEventListener('click', agregarCurso);
+
+    // Eliminar cursos
+    carrito.addEventListener('click', eliminarCurso);
+
+    // Vaciar carrito
+    vaciarCarritoBtn.addEventListener('click', () => {
+        articulosCarrito = [];
+        limpiarHTML();
+    });
 }
 
 // Funciones
@@ -19,8 +29,16 @@ function agregarCurso(e) {
     }
 }
 
+function eliminarCurso(e) {
+    e.preventDefault();
+    if (e.target.classList.contains('borrar-curso')) {
+        const cursoId = e.target.getAttribute('data-id');
+        articulosCarrito = articulosCarrito.filter(curso => curso.id !== cursoId);
+        carritoHTML();
+    }
+}
+
 function leerDatosCurso(curso) {
-    console.log(curso);
     const infoCurso = {
         imagen: curso.querySelector('img').src,
         titulo: curso.querySelector('h4').textContent,
@@ -28,27 +46,41 @@ function leerDatosCurso(curso) {
         id: curso.querySelector('a').getAttribute('data-id'),
         cantidad: 1
     }
-    articulosCarrito = [...articulosCarrito, infoCurso];
 
-    console.log(articulosCarrito);
-
+    const existe = articulosCarrito.some(curso => curso.id === infoCurso.id);
+    if (existe) {
+        const cursos = articulosCarrito.map(curso => {
+           if (curso.id === infoCurso.id) {
+               curso.cantidad ++;
+               return curso;
+           } else {
+               return curso;
+           }
+        });
+        articulosCarrito = [...cursos];
+    } else {
+        articulosCarrito = [...articulosCarrito, infoCurso];
+    }
     carritoHTML();
 }
 
 function carritoHTML() {
     limpiarHTML();
     articulosCarrito.forEach( curso => {
+        const {imagen, titulo, precio, cantidad, id} = curso;
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${curso.imagen}</td>
-            <td>${curso.titulo}</td>
-            <td>${curso.precio}</td>
-            <td>${curso.cantidad}</td>
+            <td>
+                <img src="${imagen}" width="100">
+            </td>
+            <td>${titulo}</td>
+            <td>${precio}</td>
+            <td>${cantidad}</td>
+            <td>
+                <a href="#" class="borrar-curso" data-id="${id}"> X </a>
+            </td>
         `;
-
         contenedorCarrito.appendChild(row);
-
-
     });
 }
 
